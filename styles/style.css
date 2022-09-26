@@ -1,0 +1,208 @@
+@font-face {
+  font-family: "SF Compact Display";
+  src: url(../fonts/sf-compact-display-medium-5864711817c30.otf);
+}
+@font-face {
+  font-family: "SF Compact Text";
+  src: url(../fonts/sf-compact-display-thin-58646eb43a785.otf);
+}
+@keyframes appear {
+  0% {
+    transform: translateX(-150px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: SF Compact Display;
+}
+
+body {
+  background: #dbeeee;
+}
+
+header {
+  margin: 20px;
+  margin-bottom: 5.3px;
+  display: flex;
+  justify-content: space-between;
+}
+header ul {
+  display: flex;
+  list-style: none;
+  gap: 64px;
+}
+header ul a {
+  text-decoration: none;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #3d9090;
+}
+
+main {
+  display: flex;
+}
+main .left-pannel {
+  width: 468px;
+}
+main .left-pannel .present-text {
+  font-size: 16px;
+  margin-top: 58px;
+  font-family: SF Compact Text;
+  width: 400px;
+  margin-left: 24px;
+  margin-bottom: 53px;
+  letter-spacing: 0.5px;
+}
+main .left-pannel .bottom-container {
+  display: flex;
+  border-top: 1px solid #c4c4c4;
+  justify-content: space-between;
+}
+main .left-pannel .bottom-container .infos-container .infos {
+  position: relative;
+  margin-top: 16px;
+  display: flex;
+  align-items: center;
+  height: 300px;
+  width: 300px;
+}
+main .left-pannel .bottom-container .infos-container .infos .circle {
+  position: absolute;
+  z-index: 0;
+}
+main .left-pannel .bottom-container .infos-container .infos .info {
+  padding-left: 26px;
+  font-size: 10.6px;
+  z-index: 999;
+  font-family: SF Compact Text;
+  display: flex;
+}
+main .left-pannel .bottom-container .infos-container .infos .info em {
+  font-weight: bold;
+  font-style: normal;
+}
+main .left-pannel .bottom-container .infos-container .infos .lamp-display {
+  height: 386px;
+  z-index: 999;
+  align-self: flex-start;
+  top: -16px;
+  position: absolute;
+  opacity: 0;
+  left: 196px;
+}
+main .left-pannel .bottom-container .infos-container .infos .appear {
+  animation: appear 1s ease-in-out;
+  opacity: 1;
+}
+main .left-pannel .bottom-container .infos-container .infos .lamp-3 {
+  left: 154px;
+  height: 360px;
+}
+main .left-pannel .bottom-container .lamps-container {
+  margin-top: 27px;
+  background-color: #bddddd;
+  width: 120px;
+  height: 369px;
+  border-radius: 25px 0 0 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+main .left-pannel .bottom-container .lamps-container .lamps-box {
+  display: flex;
+  gap: 13px;
+  padding: 11px;
+  flex-direction: column;
+  align-items: center;
+}
+main .left-pannel .bottom-container .lamps-container .lamps-box .lamp-box {
+  width: 88px;
+  height: 88px;
+  display: flex;
+  justify-content: center;
+  border-radius: 9px;
+  padding-bottom: 6px;
+}
+main .left-pannel .bottom-container .lamps-container .lamps-box .selected {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+main .left-pannel .bottom-container .lamps-container .lamps-box .lamp-box:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+}
+main .left-pannel .bottom-container .lamps-container .lamps-box .selected:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+main .left-pannel .bottom-container .lamps-container .lamps-box img {
+  height: 100%;
+  object-fit: contain;
+}
+main .left-pannel .bottom-container .lamps-container .light-menu {
+  display: flex;
+  height: 118px;
+}
+main .left-pannel .bottom-container .lamps-container .light-menu .light {
+  background-color: #fff3da;
+  width: 50%;
+  height: 100%;
+  border-radius: 0 0 0 25px;
+}
+main .left-pannel .bottom-container .lamps-container .light-menu .dark {
+  background-color: #94a6a6;
+  width: 50%;
+  height: 100%;
+}
+main .left-pannel .bottom-container .lamps-container .light-menu button {
+  border: none;
+  cursor: pointer;
+}
+main .right-pannel {
+  width: 578px;
+  height: 690px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+}
+main .right-pannel .lamp-display {
+  position: absolute;
+  top: 0;
+  left: 114px;
+  height: 240px;
+  opacity: 0;
+}
+main .right-pannel .appear {
+  animation: appear 1s ease-in-out;
+  opacity: 1;
+}
+main .right-pannel .lamp-3 {
+  left: 140px;
+  width: 98px;
+  top: -68px;
+  height: auto;
+}
+main .right-pannel .interior-light {
+  position: absolute;
+  border-radius: 12px;
+  z-index: 0;
+  width: 578px;
+}
+main .right-pannel .interior-dark {
+  position: absolute;
+  border-radius: 12px;
+  z-index: 1;
+  opacity: 0;
+  width: 578px;
+  transition: 0.8s ease-in-out;
+}
+main .right-pannel .activate {
+  opacity: 1;
+  transition: 1s ease-in-out;
+}
+
+/*# sourceMappingURL=style.css.map */
